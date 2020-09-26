@@ -51,17 +51,8 @@ int single()
         int z = 0;
         system("cls");
         printf("\n\n\t TIC TAC TEO\n\n");
-        printf("Player 1 (%c) - Computer (%c)\n\n\n", player, computer);
-        for (int x = 0; x < 3; x++)
-        {
-            printf("\t\t\t\t");
-            for (int i = 0; i < 3; i++)
-            {
-                printf("%c\t", arr[z]);
-                z++;
-            }
-            printf("\n\n\n");
-        }
+        printf("You (%c) - Computer (%c)\n\n\n", player, computer);
+        print();
         insert_single();
     }
     return 0;
@@ -97,19 +88,9 @@ int insert_single()
             {
                 system("cls");
                 printf("\n\n\t TIC TAC TEO\n\n");
-                printf("Player 1 (%c) - Computer (%c)\n\n\n", player, computer);
+                printf("You (%c) - Computer (%c)\n\n\n", player, computer);
                 arr[(cell - 1)] = p;
-                int z = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    printf("\t\t\t\t");
-                    for (int i = 0; i < 3; i++)
-                    {
-                        printf("%c\t", arr[z]);
-                        z++;
-                    }
-                    printf("\n\n\n");
-                }
+                print();
             }
         }
         else if (y % 2 == 0)
@@ -121,22 +102,13 @@ int insert_single()
             }
             else
             {
+                sleep(1);
                 system("cls");
                 printf("\n\n\t TIC TAC TEO\n\n");
-                printf("Player 1 (%c) - Computer (%c)\n\n\n", player, computer);
+                printf("You (%c) - Computer (%c)\n\n\n", player, computer);
                 p = computer;
                 arr[(cell - 1)] = p;
-                int z = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    printf("\t\t\t\t");
-                    for (int i = 0; i < 3; i++)
-                    {
-                        printf("%c\t", arr[z]);
-                        z++;
-                    }
-                    printf("\n\n\n");
-                }
+                print();
             }
         }
         i = checkwin();
@@ -192,16 +164,7 @@ int multi()
         system("cls");
         printf("\n\n\t TIC TAC TEO\n\n");
         printf("Player 1 (%c) - player2 (%c)\n\n\n", player1, player2);
-        for (int x = 0; x < 3; x++)
-        {
-            printf("\t\t\t\t");
-            for (int i = 0; i < 3; i++)
-            {
-                printf("%c\t", arr[z]);
-                z++;
-            }
-            printf("\n\n\n");
-        }
+        print();
         insert();
     }
     return 0;
@@ -239,17 +202,7 @@ int insert()
             printf("\n\n\t TIC TAC TEO\n\n");
             printf("Player 1 (%c) - player2 (%c)\n\n\n", player1, player2);
             arr[(cell - 1)] = p;
-            int z = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                printf("\t\t\t\t");
-                for (int i = 0; i < 3; i++)
-                {
-                    printf("%c\t", arr[z]);
-                    z++;
-                }
-                printf("\n\n\n");
-            }
+            print();
         }
         i = checkwin();
         if (i == 1)
@@ -307,4 +260,19 @@ int checkwin()
         return 0;
     else
         return -1;
+}
+int print()
+{
+    int z = 0;
+    for (int x = 0; x < 3; x++)
+    {
+        printf("\t\t\t\t");
+        for (int i = 0; i < 3; i++)
+        {
+            printf("%c\t", arr[z]);
+            z++;
+        }
+        printf("\n\n\n");
+    }
+    return 0;
 }
