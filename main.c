@@ -46,9 +46,12 @@ int single()
     if (flag == 1)
     {
         printf("Ok you will be %c and computer will be %c\n", player, computer);
-        sleep(1);
         printf("Let's start\n\n");
+        sleep(1);
         int z = 0;
+        system("cls");
+        printf("\n\n\t TIC TAC TEO\n\n");
+        printf("Player 1 (%c) - Computer (%c)\n\n\n", player, computer);
         for (int x = 0; x < 3; x++)
         {
             printf("\t\t\t\t");
@@ -92,6 +95,9 @@ int insert_single()
             }
             else
             {
+                system("cls");
+                printf("\n\n\t TIC TAC TEO\n\n");
+                printf("Player 1 (%c) - Computer (%c)\n\n\n", player, computer);
                 arr[(cell - 1)] = p;
                 int z = 0;
                 for (int x = 0; x < 3; x++)
@@ -115,7 +121,9 @@ int insert_single()
             }
             else
             {
-                printf("Computer Choose %d\n", num);
+                system("cls");
+                printf("\n\n\t TIC TAC TEO\n\n");
+                printf("Player 1 (%c) - Computer (%c)\n\n\n", player, computer);
                 p = computer;
                 arr[(cell - 1)] = p;
                 int z = 0;
@@ -178,9 +186,12 @@ int multi()
     if (flag == 1)
     {
         printf("Ok player 1 will be %c and player 2 will be %c\n", player1, player2);
-        sleep(1);
         printf("Let's start\n\n");
+        sleep(1);
         int z = 0;
+        system("cls");
+        printf("\n\n\t TIC TAC TEO\n\n");
+        printf("Player 1 (%c) - player2 (%c)\n\n\n", player1, player2);
         for (int x = 0; x < 3; x++)
         {
             printf("\t\t\t\t");
@@ -224,6 +235,9 @@ int insert()
         }
         else
         {
+            system("cls");
+            printf("\n\n\t TIC TAC TEO\n\n");
+            printf("Player 1 (%c) - player2 (%c)\n\n\n", player1, player2);
             arr[(cell - 1)] = p;
             int z = 0;
             for (int x = 0; x < 3; x++)
